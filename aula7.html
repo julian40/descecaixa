@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .body
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            
+            margin: 0px;
+           
+        }
+
+        .preto
+        {
+            width: 1000px;
+            height: 100px;
+            position: relative;
+            background-color: black;
+            left:200px;
+            top: 0px;
+            position: fixed;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            color: aliceblue;
+
+        }
+
+        .amarelo
+        {
+            width: 150px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            background-color: yellow;
+            position: relative;
+            top: -300px;
+            left: 280px;
+            z-index: -1;
+        }
+
+        .amarela2
+        {
+            width: 150px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            background-color: yellow;
+            position: relative;
+            top: -700px;
+            left: 620px;
+            z-index: -1;
+        }
+
+        .amarela3
+        {
+            width: 150px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            background-color: yellow;
+            position: relative;
+            top: -1100px;
+            left: 950px;
+            z-index: -1;
+        }
+
+        .deslizar
+        {
+            animation: descer 10s forwards;
+            
+        }
+
+        .deslizar2
+        {
+            animation: descer2 10s forwards;
+            
+        }
+        
+        .deslizar3
+        {
+            animation: descer3 10s forwards;
+            
+        }
+
+        @keyframes descer {
+            0%{top:-300px;}
+            100%{top:80px;}
+        }
+
+        @keyframes descer2 {
+            0%{top:-700px;}
+            100%{top:-330px;}
+        }
+
+        @keyframes descer3 {
+            0%{top:-1100px;}
+            100%{top:-730px;}
+        }
+
+        .opcao:hover
+        {
+            font-size: 20px;
+            color: brown;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="preto">   
+        
+        <div onclick="animaAmarela();" class="opcao">menu 1</div>
+        <div onclick="animamenu2();" class="opcao">menu 2</div>
+        <div onclick="animamenu3();" class="opcao">menu 3</div>
+    
+    </div>
+
+    <div class="amarelo" id="amarela">  
+        
+        <div class="opcao">  carro        </div>
+        <div class="opcao">  fusca        </div>
+        <div class="opcao">  carrocinha   </div>
+        <div class="opcao">  velozes      </div>
+        <div class="opcao">  furiosos     </div>
+        <div class="opcao">  uninho       </div>
+        
+    </div>
+
+    <div class="amarela2" id="amarela2">  
+        
+        <div class="opcao">  carro        </div>
+        <div class="opcao">  fusca        </div>
+        <div class="opcao">  carrocinha   </div>
+        <div class="opcao">  velozes      </div>
+        <div class="opcao">  furiosos     </div>
+        <div class="opcao">  uninho       </div>
+        
+    </div>
+
+    <div class="amarela3" id="amarela3">  
+        
+        <div class="opcao">  carro        </div>
+        <div class="opcao">  fusca        </div>
+        <div class="opcao">  carrocinha   </div>
+        <div class="opcao">  velozes      </div>
+        <div class="opcao">  furiosos     </div>
+        <div class="opcao">  uninho       </div>
+        
+    </div>
+
+    
+</body>
+
+<script>
+    function animaAmarela()
+    {
+        amarela.classList.add("deslizar");
+        amarela2.classList.remove('deslizar2');
+        amarela3.classList.remove('deslizar3');
+    }
+    function animamenu2()
+    {
+        amarela2.classList.add("deslizar2");
+        amarela.classList.remove("deslizar");
+        amarela3.classList.remove("deslizar3");
+    }
+    function animamenu3()
+    {
+        amarela3.classList.add("deslizar3");
+        amarela.classList.remove("deslizar");
+        amarela2.classList.remove("deslizar2");
+
+    }
+
+</script>
+
+
+</html>
